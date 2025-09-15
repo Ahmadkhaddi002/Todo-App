@@ -1,0 +1,132 @@
+/* General body */
+body {
+    background-color: #ddd8d8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h1 {
+    background-color: #0c6eca;
+    color: #f3efef;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Todo container */
+.todo-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px 15px;   /* padding inside for breathing room */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Input */
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add button */
+#add-button {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #05a327;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#add-button:hover {
+    background-color: #028a1f;
+}
+
+/* Todo list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Todo item */
+li {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive tweaks */
+@media (min-width: 600px) {
+    form {
+        flex-direction: row;   /* side by side */
+    }
+
+    input {
+        flex: 1;               /* take remaining space */
+        margin-right: 10px;
+    }
+
+    #add-button {
+        width: auto;           /* shrink button */
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    input, #add-button {
+        font-size: 14px;
+        height: 35px;          /* easier tap size for small screens */
+    }
+}
